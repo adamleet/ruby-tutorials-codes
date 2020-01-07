@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-friends = ["Adams","Adams","Adams"]
-friends.push("Tajudeen", "Rasheed")
-friends.shift()
-
-puts friends
-=======
 friends = ["Aisha","Nimah","Adams"]
 friends.push("Tajudeen", "Rasheed")
 friends.unshift("Taqwa")
@@ -100,4 +93,3 @@ states = {
 
 puts ("What is the capital of  Abia " + states["Abia"])
 puts "The capital of Rivers is #{states["Rivers"]}"
->>>>>>> dev
