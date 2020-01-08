@@ -67,3 +67,7 @@ y = x + 9
 puts "x is #{x} and y is #{y}"
 x, y = 3, 4
 puts y = y + 3 == y += 3
+
+num = 10
+num %= 3
+puts num

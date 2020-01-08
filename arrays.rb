@@ -10,6 +10,8 @@ my_friends[1] = "Tajudeen"
 
 puts my_friends
 
+array = %w(one two three four)
+
 #HAshes or dictionary
 states = {
     Pennslyvania: "PA",
@@ -93,3 +95,5 @@ states = {
 
 puts ("What is the capital of  Abia " + states["Abia"])
 puts "The capital of Rivers is #{states["Rivers"]}"
+
+array = %w()
