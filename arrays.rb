@@ -1,4 +1,4 @@
-friends = ["Aisha","Nimah","Adams"]
+friends = ["Aisha","Nimah","Adams"] << "Abdulganeey"
 friends.push("Tajudeen", "Rasheed")
 friends.unshift("Taqwa")
 
@@ -10,7 +10,86 @@ my_friends[1] = "Tajudeen"
 
 puts my_friends
 
+#Creating Array of string
 array = %w(one two three four)
+arrays = %w[five six seven eight]
+array_s = %w!nine ten eleven twelve!
+array1 = %w<thirteen fourteen fifteen>
+puts array
+puts arrays
+puts array_s
+puts array1
+
+var = "New world"
+%W(#{var}) # prints ["New world"]
+cities = %w(colorado pennyslavia new\ york)
+p cities
+
+Array::new
+a = Array.new(3){"x"}
+a[0].replace"adams"
+
+#Creating array of symbol
+array = %i(one two three four)
+p array
+
+greet1 = "Hello"
+greet2 = "Goodbye"
+%I(#{greet1},#{greet2} world)
+
+#Decomposition -> reassigning the values of an array to multiple variable
+arr = [1,2,3,4]
+a = arr[0]
+b = arr[1]
+c = arr[2]
+d = arr[3]
+
+a, *b = arr
+a, *b, c = arr
+a, b, c, *d = arr
+a, *b, c, *d = arr #will return an error because two splats can not be called in an assignment
+
+class Foo
+    def to_ary
+        [1,2]
+    end
+end
+a,b = Foo.new
+
+x = [1,2,3,4,5,6]
+y = [1,3,6,7,8,9]
+z = x | y #union
+f = x & y
+t = x - y #the difference between x and y and for the diffence between y and x will be y - x
+p z
+p f
+p t
+
+#compact to remove nil in an array
+
+array_with_nil = [1,3,4,5,nil, 6,nil]
+array_with_nil.compact() #removes all nil without affecting the original
+array_with_nil = array_with_nil.compact() #Overwrites the previous array
+
+#Get all combination and permutation of an array
+[1,2,3].permutation
+[1,2,3,4].permutation.to_a
+
+[1,2,3].combination(1)
+[1,2,3].combination.to_a
+
+
+[1,2,3,4,5].combination(3).to_a.length
+[1,2,3,4,5].repeated_combination(5).to_a.length
+
+#Inject and Reduce
+[1,2,3].reduce(0) {|a,b| a + b} # 0+1, 1+2 = 3 then 3 + 3 = 6
+# 6
+
+
+
+
+
 
 #HAshes or dictionary
 states = {
@@ -86,7 +165,7 @@ states = {
     "Osun" => "Oshogbo",
     "Oyo" => "Ibadan",
     "Plateau" => "Jos",
-    "Rivers" => "Port-harcpurt",
+    "Rivers" => "Port-harcourt",
     "Sokoto" => "Sokoto",
     "Taraba" => "Jalingo",
     "Yobe" => "Damaturu",
@@ -96,4 +175,3 @@ states = {
 puts ("What is the capital of  Abia " + states["Abia"])
 puts "The capital of Rivers is #{states["Rivers"]}"
 
-array = %w()
