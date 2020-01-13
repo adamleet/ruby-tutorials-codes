@@ -86,8 +86,42 @@ array_with_nil = array_with_nil.compact() #Overwrites the previous array
 [1,2,3].reduce(0) {|a,b| a + b} # 0+1, 1+2 = 3 then 3 + 3 = 6
 # 6
 
+array_map = [1,2,3,4,5,6,7,8]
+array_map.map {|i| i * 2}
+array_map.map do |i|
+    i *= 2
+end
+
+%w(1 2 3 4 5 6 7 8 9).map(&:to_i)
+%w(1 2 3 4 5 6 7 8 9 10).map(&->(i) {i.to_i * 2})
 
 
+#filtering Array
+array = [1,2,3,4,5,6,7,8]
+array.select{|number| number > 3} # {4,5,6,7,8}
+array.reject{|number| number > 3} # {1,2,3}
+
+#Array and the splat variable
+def wrap_in_array(value)
+    [*value]
+end
+
+def list(*values)
+    values.each do |value|
+        puts value
+    end
+end
+
+p list(456,445,665)
+
+#Turn multidimensional into a one dimensional array
+multi_arr = [1,2,3,[2,3,4],5,6,[4,5]]
+multi_arr.flatten
+
+numbers = (1..40).to_a #is the same thing as number = Array(1..40)
+
+odd_number = (1..10).step(2).to_a
+even_number = 2.step(10,2).to_a
 
 
 
