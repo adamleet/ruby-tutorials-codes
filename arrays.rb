@@ -123,7 +123,24 @@ numbers = (1..40).to_a #is the same thing as number = Array(1..40)
 odd_number = (1..10).step(2).to_a
 even_number = 2.step(10,2).to_a
 
+def join_as_string(arg)
+    if arg.instance_of?(Array)
+        arg.join(',')
+    elsif arg.instance_of?(Range)
+        arg.join(',')
+    else
+        arg.to_s
+    end
+end
 
+multi_arr = [
+    [
+        [1,2,3,4,5,6,7,8],
+        [2,4,6,8,10,12,14],
+        [1,3,5,7,9,11,13],
+        ['a','b','c','d']
+    ]
+]
 
 #HAshes or dictionary
 states = {
