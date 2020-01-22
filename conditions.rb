@@ -21,3 +21,21 @@ def max(num1, num2, num3)
 end
 
 puts max(4,2,1)
+
+#new control flow statements
+
+result = [:heads, :tails].sample
+
+if result == :heads
+    puts "The coin-toss came up with heads"
+else
+    puts "The coin-toss came up with tails"
+end
+
+status = if age < 18
+    :minor
+else
+    :adult
+end
+# or
+status = age < 18 ? :minor : :adult
